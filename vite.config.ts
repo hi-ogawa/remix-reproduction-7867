@@ -4,4 +4,13 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
   plugins: [remix(), tsconfigPaths()],
+  server: {
+    https: {
+      key: "localhost-key.pem",
+      cert: "localhost.pem",
+      rejectUnauthorized: false,
+      requestCert: false,
+    }
+  },
+  clearScreen: false,
 });
