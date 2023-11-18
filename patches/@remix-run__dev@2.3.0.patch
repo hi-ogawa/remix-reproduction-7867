@@ -1,0 +1,13 @@
+diff --git a/dist/vite/node/adapter.js b/dist/vite/node/adapter.js
+index c6f7097c1257ff59652836db54426030120881de..27dbc0d42d03ebfb91dccc5c8f62b699e0d484d4 100644
+--- a/dist/vite/node/adapter.js
++++ b/dist/vite/node/adapter.js
+@@ -25,7 +25,7 @@ function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'defau
+ var multipart__default = /*#__PURE__*/_interopDefaultLegacy(multipart);
+ 
+ // @ts-nocheck
+-node.installGlobals();
++// node.installGlobals();
+ function nodeToWeb(nodeStream) {
+   let destroyed = false;
+   let listeners = {};
