@@ -5,6 +5,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   plugins: [remix(), tsconfigPaths()],
   server: {
+    proxy: {},
     https: {
       key: "localhost-key.pem",
       cert: "localhost.pem",
