@@ -1,0 +1,14 @@
+diff --git a/dist/vite/node/adapter.js b/dist/vite/node/adapter.js
+index c6f7097c1257ff59652836db54426030120881de..eefbf356cae2f1f8cdf915546b11edd42401c992 100644
+--- a/dist/vite/node/adapter.js
++++ b/dist/vite/node/adapter.js
+@@ -69,6 +69,9 @@ function nodeToWeb(nodeStream) {
+ function createHeaders(requestHeaders) {
+   let headers = new undici.Headers();
+   for (let [key, values] of Object.entries(requestHeaders)) {
++    if (key.startsWith(":")) {
++      continue;
++    }
+     if (values) {
+       if (Array.isArray(values)) {
+         for (let value of values) {
